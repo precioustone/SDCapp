@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default class DetailScreen extends React.Component {
+export default class OldScreen extends React.Component {
 
   static navigationOptions = {
     title: 'Welcome To SDC',
@@ -10,7 +10,7 @@ export default class DetailScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>Open up OldScreen.js to start working on your app!</Text>
       </View>
     );
   }

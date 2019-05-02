@@ -8,17 +8,23 @@ export default class FirstScreen extends React.Component {
   };
 
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
-        <View>
-          <Button
-            title= "New Patient"
-            onPress={() => navigate('Details')}
-          />
-          <Button
-            title= "New Patient"
-          />
+        <View style={styles.row}>
+          <View style={styles.container}>
+            <Button
+              title= "New Patient"
+              onPress={() => navigate('Details')}
+            />
+          </View>
+          <View style={styles.container}>
+            <Button
+              title= "Old Patient"
+              onPress={() => navigate('Old')}
+            />
+          </View>
         </View>
       </View>
     );
@@ -28,8 +34,16 @@ export default class FirstScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  row: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    flex: 1,
+  }
 });
