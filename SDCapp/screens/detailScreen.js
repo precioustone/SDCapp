@@ -1,17 +1,31 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, TextInput,ScrollView,StyleSheet, Text, View } from 'react-native';
+
+
+import { Icon } from 'react-native-elements';
+
+
+import TextInput from '../components/textInputs.js';
 
 export default class DetailScreen extends React.Component {
 
   static navigationOptions = {
-    title: 'Welcome To SDC',
+    title: 'PLEASE ENTER DETAILS',
   };
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.container}>
+          <TextInput
+           placeholder= 'Fullname' 
+            icon={<Icon
+              name='user'
+              type='font-awesome' 
+            />}
+          />
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -22,5 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  input: {
+
   },
 });
